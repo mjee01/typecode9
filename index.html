@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1>
+            today's weather in pooptown is:
+        </h1>
+        <p class="weather">
+            sunny :-D
+        </p>
+    </div>
+</body>
+
+
+<script>
+    let text;
+    
+    
+
+    const main = document.querySelector(".main")
+    const number = Math.floor(Math.random() * 10);
+
+    if (number <= 5) {
+    text = "rainy T_T";
+    main.style.backgroundColor = "rgb(46, 52, 74)";
+    main.style.color = "#E8E8E8";
+
+
+    } 
+    else if (number === 6 || number === 8) {
+        text = "cloudy :0";
+        main.style.color="#BECFD1";       
+         main.style.backgroundColor = "rgb(171, 182, 219)";
+    } 
+    else {
+        text = "sunny :-D";
+        main.style.color="#FCF6C7";
+       
+        main.style.backgroundColor = "rgb(120, 198, 235)";
+    }
+
+    document.querySelector(".weather").innerHTML = text;
+
+    </script>
+</html>
